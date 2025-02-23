@@ -3,15 +3,25 @@ name = "tapo-p110-toggle"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "cam8001",email = "139489+cam8001@users.noreply.github.com"}
+    {name = "cam8001", email = "139489+cam8001@users.noreply.github.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "tapo (>=0.8.1,<0.9.0)"
-]
-package-mode = false
+# Adjusting Python version requirement to a current stable version
+requires-python = ">=3.8,<4.0"
 
+[tool.poetry]
+name = "tapo-p110-toggle"
+version = "0.1.0"
+description = ""
+authors = ["cam8001 <139489+cam8001@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+tapo = ">=0.8.1,<0.9.0"
+
+[tool.poetry.scripts]
+p110m_toggle = "tapo_p110_toggle.main:entry_point"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
